@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dip">
+
+    <LinearLayout
+        android:layout_width="65dp"
+        android:layout_height="79dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="2dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/num_of_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?android:attr/textColorSecondary"
+            android:text="30"
+            android:textSize="30dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?android:attr/textColorSecondary"
+            android:text="Helpers"
+            android:textSize="15dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/neededHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?android:attr/textColorSecondary"
+            android:text="Needed"
+            android:textSize="15dp"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@+id/thumbnail_date"
+        android:layout_marginLeft="0dp"
+        android:layout_alignBaseline="@+id/label_month"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_corner_color"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/task_name_list"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:text="My birthday is the best"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:autoText="false" />
+
+    </LinearLayout>
+
+</LinearLayout>

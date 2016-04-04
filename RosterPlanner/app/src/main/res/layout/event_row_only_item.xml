@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="5dip">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@+id/thumbnail_date"
+        android:layout_marginLeft="0dp"
+        android:layout_alignBaseline="@+id/label_month"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_corner_color"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/event_only_title"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:text="My birthday is the best"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignTop="@+id/thumbnail_date"
+            android:layout_toRightOf="@+id/thumbnail_date"
+            android:autoText="false" />
+
+    </LinearLayout>
+</RelativeLayout>

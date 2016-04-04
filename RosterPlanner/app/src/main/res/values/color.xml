@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#673AB7</color>
+    <color name="colorPrimaryDark">#5f36c2</color>
+    <color name="colorPrimaryRed">#7F171F</color>
+    <color name="colorGrey">#c9c9c9</color>
+    <color name="colorPink">#FF99</color>
+    <color name="colorOrange">#FF9900</color>
+    <color name="colorBlack">#111111</color>
+    <color name="colorEventProfile">#140831</color>
+</resources>

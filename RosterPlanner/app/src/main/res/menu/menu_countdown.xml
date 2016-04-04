@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <item android:id="@+id/action_search"
+        android:title="add"
+        android:icon="@drawable/ic_search"
+        android:orderInCategory="100"
+        app:showAsAction="always|withText" />
+
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:icon="@drawable/ic_three_dot"
+        android:orderInCategory="999"
+        app:showAsAction="always|withText">
+
+        <menu>
+            <item android:id="@+id/action_show_coming_soon_event"
+                android:title="Coming Soon Event"/>
+
+            <item android:id="@+id/action_show_all_event"
+                android:title="All Event" />
+
+        </menu>
+    </item>
+</menu>

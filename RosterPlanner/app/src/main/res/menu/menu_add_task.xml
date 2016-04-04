@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_add_task"
+        android:icon="@drawable/ic_add"
+        android:title="ADD TASK"
+        android:orderInCategory="100"
+        app:showAsAction="always|withText" />
+
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:icon="@drawable/ic_three_dot"
+        android:orderInCategory="999"
+        app:showAsAction="always">
+
+        <menu>
+            <item android:id="@+id/action_sort_by_name_asc"
+                android:title="Sort By Name (A-Z)"/>
+
+            <item android:id="@+id/action_sort_by_name_desc"
+                android:title="Sort By Name (Z-A)" />
+
+            <item android:id="@+id/action_sort_by_num_of_helper_asc"
+                android:title="No. of Helpers (low-high)" />
+
+            <item android:id="@+id/action_sort_by_num_of_helper_desc"
+                android:title="No. of Helpers (high-low)" />
+
+        </menu>
+    </item>
+</menu>

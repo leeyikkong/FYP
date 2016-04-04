@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <item android:id="@+id/action_add"
+        android:icon="@drawable/ic_add"
+        android:title="ADD EVENT"
+
+        android:orderInCategory="100"
+        app:showAsAction="always|withText" />
+
+    <item android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@drawable/ic_search"
+        android:orderInCategory="100"
+        app:showAsAction="always|withText" />
+
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:icon="@drawable/ic_three_dot"
+        android:orderInCategory="999"
+        app:showAsAction="always">
+
+        <menu>
+            <item android:id="@+id/action_all_event"
+                android:title="All Event"/>
+
+            <item android:id="@+id/action_event_coming_soon"
+                android:title="Event Coming Soon" />
+
+            <item android:id="@+id/action_event_within_one_week"
+                android:title="Event Within One Week" />
+
+            <item android:id="@+id/action_event_within_one_month"
+                android:title="Event Within This Month" />
+
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">RosterPlanner</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="sort_by_name_AZ">Name A-Z</string>
+    <string name="sort_by_name_ZA">Name Z-A</string>
+    <string name="sort_by_nearest_event">Nearest Event</string>
+    <string name="sort_by_farthest_event">Farthest Event</string>
+
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_home_fragment">HomeFragment</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="pick_date">Date</string>
+    <string name="pick_time">Time </string>
+    <string name="reminder">Reminder</string>
+    <string name="navigation">Navigation</string>
+    <string name="roster_planner">Roster Planner</string>
+    <string name="add_event">Add New Event</string>
+    <string name="start">START:</string>
+    <string name="end">END:</string>
+
+    <string name="enter_task_name">Enter Task Name</string>
+    <string name="enter_task_description">Task Description</string>
+    <string name="enter_numberOfHelpers">Enter number of helpers for the task</string>
+    <string name="continue_add">Save and Continue Add Task</string>
+    <string name="add">Save</string>
+    <string name="update">Update Task</string>
+
+
+    <string-array name="reminder_array">
+        <item>Select time</item>
+        <item>12 hours before</item>
+        <item>1 day before</item>
+        <item>1 week before</item>
+    </string-array>
+
+    <string-array name="repeat_array">
+        <item>Selection</item>
+        <item>Once a Week</item>
+        <item>Twice a Week</item>
+        <item>Once a Month</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

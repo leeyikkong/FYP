@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="5dip">
+
+    <LinearLayout android:id="@+id/thumbnail_date"
+        android:layout_width="65dp"
+        android:layout_height="79dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="2dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="18"
+            android:layout_gravity="center"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="30dp"
+            android:id="@+id/label_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/label_month"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="26dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sept" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@+id/thumbnail_date"
+        android:layout_marginLeft="0dp"
+        android:layout_alignBaseline="@+id/label_month"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_corner_color"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/event_title"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:text="My birthday is the best"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignTop="@+id/thumbnail_date"
+            android:layout_toRightOf="@+id/thumbnail_date"
+            android:autoText="false" />
+
+    </LinearLayout>
+</RelativeLayout>

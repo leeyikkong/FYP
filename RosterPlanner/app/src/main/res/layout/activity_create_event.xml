@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent" >
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <EditText
+            android:id="@+id/club"
+            android:hint="Enter Club Name"
+
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/edit_title"
+            android:layout_height="64dp"
+            android:layout_width="fill_parent"
+            android:hint="Enter Event Name"
+
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/edit_description"
+            android:layout_height="64dp"
+            android:layout_width="fill_parent"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:padding="10dp"
+            android:hint="Description" />
+
+        <GridLayout
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:columnCount="2"
+            android:rowCount="9"
+            android:orientation="horizontal">
+
+
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_calendar_purple"
+                android:padding="8dp"/>
+
+            <Switch
+                android:id="@+id/switch_all_day"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:textSize="16dp"
+                android:textOff="No"
+                android:textOn="Yes"
+                android:text="All Day Event     "
+                android:paddingLeft="16dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/icon_blank"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:padding="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <GridLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:orientation="horizontal">
+                    <TextView
+
+                        android:textColor="#800080"
+                        android:id="@+id/date"
+                        android:layout_height="52dp"
+                        android:layout_width="120dp"
+                        android:paddingLeft="16dp"
+
+                        android:paddingTop="10dp"
+                        android:text="DATE"
+                        android:textSize="15dp"/>
+
+                    <TextView
+                        android:textColor="#800080"
+                        android:id="@+id/time"
+                        android:layout_height="52dp"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:paddingLeft="15dp"
+
+                        android:paddingTop="10dp"
+                        android:text="TIME"
+                        android:textSize="16dp"/>
+                </GridLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:textColor="#800080"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/start"
+                android:textSize="15dp"
+                android:padding="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <GridLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txt_start_date"
+                        android:layout_height="52dp"
+                        android:layout_width="120dp"
+                        android:paddingLeft="16dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="23/4/2015"
+                        android:editable="false"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_start_time"
+                        android:layout_height="52dp"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:paddingLeft="16dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="23:00"
+                        android:editable="false"
+                        android:textSize="16dp"/>
+                </GridLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:textColor="#800080"
+                android:id="@+id/end_section"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="15dp"
+                android:text="@string/end"
+                android:padding="8dp"
+                android:visibility="visible"/>
+
+            <LinearLayout
+                android:id="@+id/end_date_time_sector"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <GridLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_end_date"
+                        android:layout_height="52dp"
+                        android:layout_width="120dp"
+                        android:paddingLeft="16dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="23/4/2015"
+                        android:editable="false"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/txt_end_time"
+                        android:layout_height="52dp"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:paddingLeft="16dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="23:00"
+                        android:editable="false"
+                        android:textSize="16dp"/>
+                </GridLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_notification_purple"
+                android:padding="8dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <Switch
+                    android:id="@+id/switch_reminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:textSize="16dp"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:text="Reminder            "
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/icon_blank2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:padding="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/spinner_reminder_sector"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/reminder_spinner"
+                        android:layout_marginLeft="8dp"
+                        android:spinnerMode="dialog"
+                        android:popupBackground="#DCDCDC"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_refresh"
+                android:padding="8dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <Switch
+                    android:id="@+id/switch_repeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:textSize="16dp"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:text="Repeat Event      "
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/icon_blank3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:padding="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/spinner_repeat_sector"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/repeat_spinner"
+                        android:layout_marginLeft="8dp"
+                        android:spinnerMode="dialog"
+                        android:popupBackground="#DCDCDC"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_location_purple"
+                android:padding="8dp"/>
+
+
+            <EditText
+                android:id="@+id/txt_location"
+                android:layout_height="48dp"
+                android:layout_width="fill_parent"
+                android:paddingLeft="16dp"
+                android:hint="Location"
+                android:layout_marginRight="50dp"
+                android:textSize="16dp"/>
+
+
+        </GridLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

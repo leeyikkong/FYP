@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/taskName"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="64dp"
+            android:hint="@string/enter_task_name"/>
+
+        <EditText
+            android:id="@+id/task_Description"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="64dp"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:hint="@string/enter_task_description"/>
+
+        <EditText
+            android:id="@+id/numberOfHelers"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="64dp"
+            android:hint="@string/enter_numberOfHelpers"/>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="64dp"
+            android:hint="@string/update"/>
+    </LinearLayout>
+</LinearLayout>
