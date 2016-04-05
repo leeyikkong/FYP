@@ -35,7 +35,7 @@ public class TaskProfile extends AppCompatActivity{
     private Toolbar toolbar;
     private Button mAddHelperButton;
     private Button mEditHelperButton;
-    private Button whatsappGroup;
+    private Button messagingAppGroup;
     private Button whatsapp;
     private Button sms;
 
@@ -123,7 +123,7 @@ public class TaskProfile extends AppCompatActivity{
         mTaskName = (TextView)findViewById(R.id.task_name);
         mTaskDescription = (TextView)findViewById(R.id.task_Description);
         mEditHelperButton = (Button)findViewById(R.id.edit_helper);
-        whatsappGroup = (Button)findViewById(R.id.send_to_group);
+        messagingAppGroup = (Button)findViewById(R.id.send_to_group);
     }
 
     private void setUpInterface(){
@@ -145,13 +145,12 @@ public class TaskProfile extends AppCompatActivity{
             }
         });
 
-        whatsappGroup.setOnClickListener(new View.OnClickListener() {
+        messagingAppGroup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent waIntent = new Intent(Intent.ACTION_SEND);
                 waIntent.putExtra(Intent.EXTRA_TEXT, GroupMessage);
-                waIntent.setPackage("com.whatsapp");
                 waIntent.setType("text/plain");
-                startActivity(waIntent);
+                startActivity(Intent.createChooser(waIntent, "Share Event's Details with:"));
             }
         });
     }
@@ -180,6 +179,7 @@ public class TaskProfile extends AppCompatActivity{
                     public void onClick(DialogInterface dialog, int which) {
                         DbHandler db = new DbHandler(getBaseContext());
                         db.deleteTask(TASK_ID);
+                        //db.deleteTaskInSession(TASK_ID);
                         Toast.makeText(getApplicationContext(),
                                 "Delete successful", Toast.LENGTH_LONG)
                                 .show();
@@ -237,14 +237,14 @@ public class TaskProfile extends AppCompatActivity{
     private String groupMessage(){
         String eventDetails;
 
-        eventDetails = "Hello Dear, the " + club + " club has organise an event (" +
+        eventDetails = "Hello dear,\n\nThe " + club + " has organised an event (" +
                 eventName + ")" + " on " + eventStartDate + " Time ( " + eventStartTime + " ) " +
                 "until " + eventEndDate + " Time ( " + eventEndTime + " )." +
-                "Here is the details for the event : " + taskDescription +
-                ". I sincerely to invite you to become a helper of the event." +
-                "The task that assign to you is " + taskName +
-                " for this event. Here is the details about the task " + taskDescription +
-                " for more information, please contact me personally. Thank You.";
+                "Here is the details for the event :\n" + eventDescription +
+                ".\n\nI sincerely to invite you to become a helper of the event." +
+                "The task that assign for you is " + taskName +
+                " for this event. Here is the details about the task:\n" + taskDescription +
+                "\n\nFor more information, please contact me personally. Thank You.";
 
         return eventDetails;
     }

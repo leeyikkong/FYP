@@ -48,7 +48,7 @@
         <TextView
             android:id="@+id/event_title"
             android:textColor="#ffffff"
-            android:gravity="center"
+            android:gravity="left"
             android:text="My birthday is the best"
             android:textSize="20dp"
             android:layout_height="wrap_content"

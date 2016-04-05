@@ -33,13 +33,11 @@ public class HelperRowViewAdapter extends ArrayAdapter<Helpers>{
         View rowView = inflater.inflate(R.layout.helper_row_item, parent, false);
 
         TextView helperName = (TextView) rowView.findViewById(R.id.helper_name);
-        TextView helperContact = (TextView) rowView.findViewById(R.id.helper_contact);
         Button whatsapp = (Button) rowView.findViewById(R.id.whatsapps);
         Button sms = (Button) rowView.findViewById(R.id.sms);
 
         helperName.setText(helpersList.get(position).get_helperName());
         contactNumber = helpersList.get(position).get_helperContactNumber();
-        helperContact.setText(contactNumber);
         name = helpersList.get(position).get_helperName();
 
         whatsapp.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +46,16 @@ public class HelperRowViewAdapter extends ArrayAdapter<Helpers>{
                 Uri mUri = Uri.parse("smsto:" + contactNumber);
                 Intent intent = new Intent(Intent.ACTION_SENDTO, mUri);
                 intent.setPackage("com.whatsapp");
-                String text = name;
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
+
+        sms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri mUri = Uri.parse("smsto:" + contactNumber);
+                Intent intent = new Intent(Intent.ACTION_SENDTO, mUri);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }

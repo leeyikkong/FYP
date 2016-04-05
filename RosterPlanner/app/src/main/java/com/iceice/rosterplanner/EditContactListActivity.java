@@ -55,7 +55,7 @@ public class EditContactListActivity extends AppCompatActivity implements Adapte
         helpersListWithTaskId(TASK_ID);
 
         getAllContacts(this.getContentResolver());
-        ListView contactListView = (ListView) findViewById(R.id.contact_list_view);
+        ListView contactListView = (ListView) findViewById(R.id.edit_contact_list_view);
         contactListAdapter = new ContactListAdapter();
         contactListView.setAdapter(contactListAdapter);
         contactListView.setOnItemClickListener(this);
@@ -64,33 +64,6 @@ public class EditContactListActivity extends AppCompatActivity implements Adapte
 
         // adding
         confirmButton = (Button) findViewById(R.id.confirm_button);
-//        confirmButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                deleteSessionDateByTaskId(TASK_ID);
-//                System.out.println(".............." + contactListAdapter.mCheckStates.size());
-//                for (int i = 0; i < contactName.size(); i++) {
-//                    boolean status = true;
-//                    if (contactListAdapter.mCheckStates.get(i) == true) {
-//                        System.out.println(".....int........." + contactListAdapter.mCheckStates.get(i));
-//                        //boolean status = true;
-//                        name = contactName.get(i);
-//                        number = contactNumber.get(i);
-//                        saveDuplicateHelpersWithTaskId();
-//                        for (Helpers item : list) {
-//                            if (number.equals(item.get_helperContactNumber())) {
-//                                status = false;
-//                            }
-//                        }
-//                        if (status) {
-//                            saveHelpers();
-//                        }
-//                        Toast.makeText(EditContactListActivity.this, name, Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//                finish();
-//            }
-//        });
     }
 
     protected void onResume(){
@@ -101,7 +74,7 @@ public class EditContactListActivity extends AppCompatActivity implements Adapte
         helpersListWithTaskId(TASK_ID);
 
         getAllContacts(this.getContentResolver());
-        ListView contactListView = (ListView) findViewById(R.id.contact_list_view);
+        ListView contactListView = (ListView) findViewById(R.id.edit_contact_list_view);
         contactListAdapter = new ContactListAdapter();
         contactListView.setAdapter(contactListAdapter);
         contactListView.setOnItemClickListener(this);
@@ -253,7 +226,7 @@ public class EditContactListActivity extends AppCompatActivity implements Adapte
             TextView tv = (TextView) view.findViewById(R.id.contact_name);
             contactNameAndNumberView = (TextView) view.findViewById(R.id.phone_number);
             checkBox = (CheckBox) view.findViewById(R.id.checkBox_id);
-            tv.setText("Name :" + contactName.get(position));
+            tv.setText(contactName.get(position));
             contactNameAndNumberView.setText("Phone No :" + contactNumber.get(position));
 
             boolean status = false;

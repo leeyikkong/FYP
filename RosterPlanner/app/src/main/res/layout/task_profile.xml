@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:lines="2"
                 android:id="@+id/task_name"
-                android:textSize="20dp"
+                android:textSize="17dp"
                 android:textColor="#ffff"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="2dp"
@@ -44,7 +44,7 @@
 
             <TextView
                 android:id="@+id/task_Description"
-                android:lines="6"
+                android:lines="5"
                 android:maxLines="10"
                 android:hint="none"
                 android:layout_height="wrap_content"
@@ -55,7 +55,6 @@
                 android:paddingBottom="16dp"
                 android:paddingTop="16dp"
                 android:textSize="16dp"/>
-
         </LinearLayout>
 
         <LinearLayout
@@ -73,13 +72,15 @@
                 android:drawableLeft="@drawable/ic_add_people"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="13dp"
                 android:layout_weight="1"
                 android:text="Select / Edit Helper"/>
 
             <Button
                 android:id="@+id/send_to_group"
-                android:text="send through WhatsApp Group"
-                android:drawableLeft="@drawable/ic_whatsapp"
+                android:drawableLeft="@drawable/ic_send_message"
+                android:text="send Event's Details to Group"
+                android:textSize="13dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>

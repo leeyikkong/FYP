@@ -88,7 +88,7 @@ public class DbHandler extends SQLiteOpenHelper {
                     "FOREIGN KEY ( " + SESSION_CONTACT_NUMBER + " ) REFERENCES " +
                     HELPER_TABLE + " ( " + HELPER_CONTACT_NUMBER + " )," +
                     "FOREIGN KEY ( " + SESSION_TASK_ID + " ) REFERENCES " +
-                    TASK_TABLE + " ( " + TASK_ID + " ));";
+                    TASK_TABLE + " ( " + TASK_ID + " ) ON DELETE CASCADE);";
 
     //CREATE HELPERS TABLE
     private static String CREATE_HELPER_TABLE =
@@ -650,6 +650,12 @@ public class DbHandler extends SQLiteOpenHelper {
     public void deleteTask(int taskId){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TASK_TABLE, TASK_ID + " = " + taskId, null);
+        db.close();
+    }
+
+    public void deleteTaskInSession(int taskId){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(SESSION_TABLE, SESSION_TASK_ID + " = " + taskId, null);
         db.close();
     }
 

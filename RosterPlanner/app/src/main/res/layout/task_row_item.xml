@@ -57,7 +57,7 @@
         <TextView
             android:id="@+id/task_name_list"
             android:textColor="#ffffff"
-            android:gravity="center"
+            android:gravity="left"
             android:text="My birthday is the best"
             android:textSize="20dp"
             android:layout_height="wrap_content"
